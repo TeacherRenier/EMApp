@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FET Phase Exam Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>FET Phase Exam Form</h1>
+        <form id="seniorForm" onsubmit="submitSeniorForm(event)">
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="Mathematics (Core)">Mathematics</option>
+                <option value="Mathematics (Literacy)">Mathematics</option>
+                <option value="Physical Sciences"></option>
+                <option value="Life Sciences"></option>
+                <option value="Visual Art"></option>
+                <option value="Drama"></option>
+                <option value="Information Technology"></option>
+                <option value="Computer Applications Technology"></option>
+              <option value="Afrikaans FAL"></option>
+              <option value="isiZulu FAL"></option>
+              <option value="English HL"></option>
+              <option value="Life Orientation"></option>
+              <option value="History"></option>
+              <option value="Geography"></option>
+              <!-- Add more FET Phase subjects as needed -->
+            </select>
+      <br><br>
+            <label for="grade">Grade:</label>
+            <select id="grade" name="grade" required>
+                <option value="Grade 10">Grade 8</option>
+                <option value="Grade 11">Grade 9</option>
+                <option value="Grade 12">Grade 9</option>
+            </select>
+      <br><br>
+            <label for="examiner">Examiner:</label>
+            <input type="text" id="examiner" name="examiner" pattern="^(Mr\.|Ms\.|Mrs\.)\s[A-Z]\.\s[A-Z][a-zA-Z]*$"  title="Please enter a name in the format: Mr. F. Falamo, Ms. F. Falamo, or Mrs. F. Falamo" required>
+            
+            
+            <br><br>
+            <label for="duration">Exam Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" min="1" value="90" placeholder="Enter duration in minutes" required>
+      <br><br>
+            <button type="submit">Submit and Generate PDF</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
